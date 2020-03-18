@@ -1,0 +1,5 @@
+name= Additional Field Types
+description = Adds two new field types - pasture and garden for farm management
+core = 7.x
+package = farmOS contrib
+dependencies[] = farm_area
