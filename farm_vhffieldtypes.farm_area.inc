@@ -3,7 +3,7 @@
 * @file
 * Farm area hooks - to add the new field types
 */
-function farm_vhffieldtypes_area_types_farm_area_type_info(){
+function farm_vhffieldtypes_farm_area_type_info(){
   return array(
     'pasture'=> array(
       'label' => t('Pasture'),
