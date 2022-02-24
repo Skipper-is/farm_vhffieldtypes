@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - farm_vhffieldtypes
+id: land_type_pasture
+color: darkgreen
+conditions:
+  asset_type:
+    - land
+  land_type:
+    - pasture

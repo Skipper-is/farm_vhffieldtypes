@@ -1,0 +1,7 @@
+name: VHF Land asset
+description: Adds custom Land asset types for Vale Head Farm
+type: module
+package: farmOS Assets
+core_version_requirement: ^9
+dependencies:
+  -farm:farm_land
