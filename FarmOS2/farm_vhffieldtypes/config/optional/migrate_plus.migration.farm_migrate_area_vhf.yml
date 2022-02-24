@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - farm_migrate
+      - farm_vhffieldtypes
+id: farm_migrate_area_vhf
+label: 'VHF Area assets (from areas) v2'
+migration_group: farm_migrate_area
+migration_tags:
+  - 'Drupal 7'
+  - 'farmOS 1.x'
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+source:
+  plugin: d7_farm_area
+  area_type:
+    - pasture
+    - garden
+destination:
+  plugin: 'entity:asset'
+process:
+  # Hard-code the bundle.
+  type:
+    plugin: default_value
+    default_value: land
+  land_type:
+    plugin: static_map
+    source: field_farm_area_type
+    map:
+      pasture: pasture
+      garden: garden
+    default_value: pasture
+migration_dependencies:
+  required: {  }
+  optional: {  }
